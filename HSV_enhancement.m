@@ -13,13 +13,13 @@ for i=1:numel(Iname)
     va=1/(vmax-vmin); vb=-vmin/(vmax-vmin);
     I_V=(sqrt(100*((I_v-vmin)/(vmax-vmin)))/10-vb)/va;
     HSV=cat(3,I_h,I_s,I_V);
-    imwrite(hsv2rgb(HSV),[Iname{i}(1),'_1.png'])
+    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_1.png'])
 % Saturation modification 飽和度調整
     smax=max(max(I_s)); smin=min(min(I_s));
     sa=1/(smax-smin); sb=-smin/(smax-smin);
     I_S=(sqrt(100*((I_s-smin)/(smax-smin)))/10-sb)/sa;
     HSV=cat(3,I_h,I_S,I_V);
-    imwrite(hsv2rgb(HSV),[Iname{i}(1),'_2.png'])
+    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_2.png'])
 % Hue modification 色調調整
     h_n=1/3; I_H=zeros(M,N);
     for n=1:1/h_n
@@ -32,7 +32,7 @@ for i=1:numel(Iname)
     end
     I_H(I_H>1)=I_H(I_H>1)-1; I_H(I_H<0)=I_H(I_H<0)+1;
     HSV=cat(3,I_H,I_S,I_V);
-    imwrite(hsv2rgb(HSV),[Iname{i}(1),'_3.png'])
+    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_3.png'])
 % rgb fixing 色調校正
     rgb=im2double(II{i});
     r=rgb(:,:,1); g=rgb(:,:,2); b=rgb(:,:,3);
@@ -40,6 +40,6 @@ for i=1:numel(Iname)
     mask=abs(r-g)<thres&abs(r-b)<thres&abs(g-b)<thres;
     I_H(mask)=I_h(mask); I_S(mask)=I_s(mask);
     HSV=cat(3,I_H,I_S,I_V);
-    imwrite(hsv2rgb(HSV),[Iname{i}(1),'_4.png'])
+    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_4.png'])
 end
 close, disp('Successful.')
