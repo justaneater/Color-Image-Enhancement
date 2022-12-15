@@ -21,7 +21,7 @@ for i=1:numel(Iname)
     HSV=cat(3,I_h,I_S,I_V);
     imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_2.png'])
 % Hue modification 色調調整
-    h_n=1/3; I_H=zeros(M,N);
+    h_n=1/2; I_H=zeros(M,N);
     for n=1:1/h_n
         mask=I_h>=(n-1)*h_n&I_h<n*h_n;
         h=I_h; h(~mask)=0;
