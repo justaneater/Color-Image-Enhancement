@@ -16,7 +16,6 @@ for V=0:100
 end
 montage(HSV,'Indices',2:101,'Size',[10 10],...
         'BorderSize',1,'BackgroundColor','w')
-
 % grayspace threshold
 figure
 for V=0:100
