@@ -8,7 +8,7 @@
 
 * [model_analysis_CIELAB.m](https://github.com/justaneater/Color-Image-Enhancement/blob/main/model_analysis_CIELAB.m) shows the colormaps within the gamut corresponding to different L values in the CIELAB color space, the results can be found in [gamut_Lab](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/gamut_Lab); you can also find the colormaps without gamut-mapping in [CIELab](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/CIELab)
 
-* [model_analysis_HSV.m](https://github.com/justaneater/Color-Image-Enhancement/blob/main/model_analysis_HSV.m) shows the colormaps and the acceptable white areas respectively within the gamut corresponding to different V values in the HSV color space, the results can be found in [HSV](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/HSV) and [HSV_w](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/HSV_w)
+* [model_analysis_HSV.m](https://github.com/justaneater/Color-Image-Enhancement/blob/main/model_analysis_HSV.m) shows the colormaps within the gamut corresponding to different V values in the HSV color space. The results can be found in [HSV](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/HSV)
 
 ## Results
 
