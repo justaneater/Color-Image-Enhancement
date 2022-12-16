@@ -36,7 +36,7 @@ for i=1:numel(Iname)
 % rgb fixing 色調校正
     rgb=im2double(II{i});
     r=rgb(:,:,1); g=rgb(:,:,2); b=rgb(:,:,3);
-    thres=0.04;
+    thres=3/256;
     mask=abs(r-g)<thres&abs(r-b)<thres&abs(g-b)<thres;
     I_H(mask)=I_h(mask); I_S(mask)=I_s(mask);
     HSV=cat(3,I_H,I_S,I_V);
