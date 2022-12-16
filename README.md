@@ -1,5 +1,4 @@
 # Color-Image-Enhancement
-# autoencoder
 
 ## Usage
 
