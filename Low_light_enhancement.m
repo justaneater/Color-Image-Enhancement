@@ -9,6 +9,6 @@ for i=1:numel(Iname)
     AInv=imcomplement(II{i});
     BInv=imreducehaze(AInv,'ContrastEnhancement','none');
     B=imcomplement(BInv);
-    imwrite(B,[Iname{i}(1:2),'_E.tif'])
+    imwrite(B,[Iname{i}(1:2),'_E.png'])
 end
 close, disp('Successful.')
