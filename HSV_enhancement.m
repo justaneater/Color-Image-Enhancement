@@ -19,7 +19,7 @@ for i=1:numel(Iname)
     I_S=(sqrt(100*((I_s-smin)/(smax-smin)))/10-sb)/sa;
     HSV=cat(3,I_h,I_S,I_V);
 % Hue modification 色調調整
-    h_n=1/2; I_H=zeros(M,N);
+    h_n=1/3; I_H=zeros(M,N);
     for n=1:1/h_n
         mask=I_h>=(n-1)*h_n&I_h<n*h_n;
         h=I_h; h(~mask)=0;
@@ -30,6 +30,6 @@ for i=1:numel(Iname)
     end
     I_H(I_H>1)=I_H(I_H>1)-1; I_H(I_H<0)=I_H(I_H<0)+1;
     HSV=cat(3,I_H,I_S,I_V);
-    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_E.png'])
+    imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_E.tif'])
 end
 close, disp('Successful.')
