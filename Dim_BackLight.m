@@ -1,6 +1,6 @@
 
 clc,clear,close all
-Idata=imageDatastore('Original','IncludeSubfolders',true);
+Idata=imageDatastore('Original','IncludeSubfolders',true,'FileExtensions',{'.png'});
 II=readall(Idata);
 IName=dir('Original\*.png'); Iname={IName.name};
 mkdir('Dim_Backlight'), cd Dim_Backlight
