@@ -1,6 +1,6 @@
 
 clc,clear,close all
-Idata=imageDatastore('Image','IncludeSubfolders',true);
+Idata=imageDatastore('Image','IncludeSubfolders',true,'FileExtensions',{'.png'});
 II=readall(Idata);
 IName=dir('Image\**\*.png'); Iname={IName.name};
 mkdir('Result'), cd Result
