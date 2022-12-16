@@ -24,7 +24,7 @@ for V=0:100
     R=rgb(:,:,1); G=rgb(:,:,2); B=rgb(:,:,3);
     mask=R>1|R<0|G>1|G<0|B>1|B<0;
     R(mask)=0; G(mask)=0; B(mask)=0;
-    thres=0.04;
+    thres=3/255;
     mask=abs(R-G)<thres & abs(R-B)<thres & abs(G-B)<thres;
     R(~mask)=0; G(~mask)=0; B(~mask)=0;
     RGB=cat(3,R,G,B);
