@@ -1,4 +1,5 @@
 # Color-Image-Enhancement
+## [Method](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
 
 ## Usage
 * [model_analysis_CIELAB.m](https://github.com/justaneater/Color-Image-Enhancement/blob/main/model_analysis_CIELAB.m) shows the colormaps within the gamut corresponding to different L values in the CIELAB color space, the results can be found in [CIELAB_gamut](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/CIELAB_gamut); you can also find the colormaps without gamut-mapping in [CIELAB](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/CIELAB)
@@ -18,5 +19,5 @@ The left parts are the original image and its dim backlight version. The middle 
 
 ![圖片7](https://user-images.githubusercontent.com/96414401/208183327-e55a071f-0a92-457d-9bcb-13d6657940aa.png)
 ![圖片8](https://user-images.githubusercontent.com/96414401/208183345-4af917d7-3733-4837-b4f9-64476f8e77a5.png)
-![圖片9](https://user-images.githubusercontent.com/96414401/208184523-609abac1-e2e5-4c1d-bee7-d28c841675cd.png)
+![圖片9](https://user-images.githubusercontent.com/96414401/208185302-e73f941b-de03-4768-a500-e4cd34f55020.png)
 ![圖片10](https://user-images.githubusercontent.com/96414401/208183374-9ae3c1e8-0870-4e4b-8634-79880a8fe929.png)
