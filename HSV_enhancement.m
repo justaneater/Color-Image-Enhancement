@@ -30,13 +30,6 @@ for i=1:numel(Iname)
     end
     I_H(I_H>1)=I_H(I_H>1)-1; I_H(I_H<0)=I_H(I_H<0)+1;
     HSV=cat(3,I_H,I_S,I_V);
-% rgb fixing 色調校正
-    rgb=im2double(II{i});
-    r=rgb(:,:,1); g=rgb(:,:,2); b=rgb(:,:,3);
-    thres=3/256;
-    mask=abs(r-g)<thres&abs(r-b)<thres&abs(g-b)<thres;
-    I_H(mask)=I_h(mask); I_S(mask)=I_s(mask);
-    HSV=cat(3,I_H,I_S,I_V);
     imwrite(hsv2rgb(HSV),[Iname{i}(1:2),'_E.png'])
 end
 close, disp('Successful.')
