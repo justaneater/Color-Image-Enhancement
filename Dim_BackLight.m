@@ -1,9 +1,9 @@
 
 clc,clear,close all
-Idata=imageDatastore('Input','IncludeSubfolders',true);
+Idata=imageDatastore('Original','IncludeSubfolders',true);
 II=readall(Idata);
-IName=dir('Input\*.png'); Iname={IName.name};
-cd Input
+IName=dir('Original\*.png'); Iname={IName.name};
+mkdir('Dim_Backlight'), cd Dim_Backlight
 for i=1:numel(Iname)
     RGB=im2double(II{i});
     R=RGB(:,:,1);G=RGB(:,:,2);B=RGB(:,:,3);
