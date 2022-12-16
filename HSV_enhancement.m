@@ -1,8 +1,8 @@
 
 clc,clear,close all
-Idata=imageDatastore('Input','IncludeSubfolders',true);
+Idata=imageDatastore('Image','IncludeSubfolders',true);
 II=readall(Idata);
-IName=dir('Input\*.png'); Iname={IName.name};
+IName=dir('Image\**\*.png'); Iname={IName.name};
 mkdir('Result'), cd Result
 for i=1:numel(Iname)
     [M,N]=size(II{i},[1 2]);
