@@ -1,9 +1,9 @@
 # Color-Image-Enhancement
 * Set your github to dark theme before reading
 ## [Method - HSV Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
-Step1 - normalize the `V`(Value) channel and apply gamma correction with γ=0.5
+Step1 - normalize the `V`(Value) channel and apply gamma correction with `γ=0.5`
 
-Step2.1 - normalize the `S`(Saturation) channel and apply gamma correction with γ=0.5
+Step2.1 - normalize the `S`(Saturation) channel and apply gamma correction with `γ=0.5`
 
 Step2.2 - Set the threshold of `S/V`, and restore the S value to the value before normalization if the color block is below the threshold
 
