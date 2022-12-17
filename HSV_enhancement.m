@@ -17,6 +17,13 @@ for i=1:numel(Iname)
     smax=max(max(I_s)); smin=min(min(I_s));
     sa=1/(smax-smin); sb=-smin/(smax-smin);
     I_S=(sqrt(100*((I_s-smin)/(smax-smin)))/10-sb)/sa;
+    % white area
+    for v=1:100
+        mask=I_v>=(v-1)/100&I_v<=v/100;
+        s=I_s; s(~mask)=1;
+        mask=s<=sqrt(v)*0.01&s>=0;
+        I_S(mask)=s(mask);
+    end
     HSV=cat(3,I_h,I_S,I_V);
 % Hue modification 色調調整
     h_n=1/12; I_H=zeros(M,N);
