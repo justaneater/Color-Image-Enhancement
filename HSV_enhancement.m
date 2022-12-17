@@ -19,13 +19,13 @@ for i=1:numel(Iname)
     I_S=(sqrt(100*((I_s-smin)/(smax-smin)))/10-sb)/sa;
     HSV=cat(3,I_h,I_S,I_V);
 % Hue modification 色調調整
-    h_n=1/3; I_H=zeros(M,N);
+    h_n=1/12; I_H=zeros(M,N);
     for n=1:1/h_n
         mask=I_h>=(n-1)*h_n&I_h<n*h_n;
         h=I_h; h(~mask)=0;
         hmax=max(max(h(h~=0))); hmin=min(min(h(h~=0)));
         a=1/(hmax-hmin); b=-hmin/(hmax-hmin);
-        H=((a*h+b)+(n-1))*h_n;
+        H=((a*h+b)+(n-1))*h_n; H(~mask)=0;
         I_H=I_H+H;
     end
     I_H(I_H>1)=I_H(I_H>1)-1; I_H(I_H<0)=I_H(I_H<0)+1;
