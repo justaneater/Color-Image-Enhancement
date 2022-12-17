@@ -1,16 +1,30 @@
 # Color-Image-Enhancement
 * Set your github to dark theme before reading
-## [Method - HSV Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
-Step1 - normalize the `V`(Value) channel and apply gamma correction with `γ=0.5`
 
-Step2.1 - normalize the `S`(Saturation) channel and apply gamma correction with `γ=0.5`
+## [Foreword - Low Light Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/Low_light_enhancement.m)
+The full code can be found in [MATLAB Documentation](https://www.mathworks.com/help/images/low-light-image-enhancement.html?s_tid=srchtitle_low%20light_1). The code used in this project are divided into three steps.
 
-Step2.2 - Set the threshold of `S/V`, and restore the S value to the value before normalization if the color block is below the threshold
+Step 1 - Invert the low-light image using the `Imcomplement()` function
 
-![CIELab](https://user-images.githubusercontent.com/96414401/208231458-b51f6be6-3b1a-4c7b-92c1-5bb6e83bbb58.png)
-![untitled](https://user-images.githubusercontent.com/96414401/208231462-623df974-56be-4c7e-ab51-2b3fdd8b1da1.png)
+Step 2 - Apply the haze removal algorithm to the inverted low-light image using the `imreducehaze()` function
 
-Step3 - Divide the `H`(Hue) Channel into 12 pieces, and apply linear normalization to each pieces
+Step 3 - Invert the haze-reduced image back to obtain the enhanced image
+
+The difference of image after each steps are shown as below :
+
+![圖片1](https://user-images.githubusercontent.com/96414401/208234865-13ecc44a-3085-45b0-bec3-6dee6c85e3b4.png)
+![圖片2](https://user-images.githubusercontent.com/96414401/208234867-18a311aa-973b-474b-bab1-b4b191956aab.png)
+
+## [My Method - HSV Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
+Step 1 - Normalize the `V`(Value) channel and apply gamma correction with `γ=0.5`
+
+Step 2.1 - Normalize the `S`(Saturation) channel and apply gamma correction with `γ=0.5`
+
+Step 2.2 - Set the threshold of `S/V`, and restore the S value to the value before normalization if the color block is below the threshold
+
+![CIELab](https://user-images.githubusercontent.com/96414401/208231458-b51f6be6-3b1a-4c7b-92c1-5bb6e83bbb58.png) ![untitled](https://user-images.githubusercontent.com/96414401/208231462-623df974-56be-4c7e-ab51-2b3fdd8b1da1.png)
+
+Step 3 - Divide the `H`(Hue) Channel into 12 pieces, and apply linear normalization to each pieces
 
 ![螢幕擷取畫面 2022-12-10 084129](https://user-images.githubusercontent.com/96414401/208231431-d81b299b-9c94-4c08-b2b1-c4456d63ef25.png)
 
