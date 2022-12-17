@@ -1,5 +1,5 @@
 # Color-Image-Enhancement
-* set your github to dark theme before reading
+* Set your github to dark theme before reading
 ## [Method](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
 Step1 - normalize the `V`(Value) channel and apply gamma correction with γ=0.5
 
