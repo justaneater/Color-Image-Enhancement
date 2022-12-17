@@ -1,6 +1,6 @@
 # Color-Image-Enhancement
 * Set your github to dark theme before reading
-## [Method](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
+## [Method - HSV Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/HSV_enhancement.m)
 Step1 - normalize the `V`(Value) channel and apply gamma correction with γ=0.5
 
 Step2.1 - normalize the `S`(Saturation) channel and apply gamma correction with γ=0.5
