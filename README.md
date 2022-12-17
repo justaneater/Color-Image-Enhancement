@@ -17,6 +17,7 @@ Step3 - Divide the `H`(Hue) Channel into 12 pieces, and apply linear normalizati
 The difference of image after each steps are shown as below :
 
 ![圖片4](https://user-images.githubusercontent.com/96414401/208231151-883ef113-6a27-4930-a134-3cca27afe95c.png)
+![圖片3](https://user-images.githubusercontent.com/96414401/208231691-e0a946b1-5aef-483b-86b2-aed91b4fd14b.png)
 
 ## Usage
 * [model_analysis_CIELAB.m](https://github.com/justaneater/Color-Image-Enhancement/blob/main/model_analysis_CIELAB.m) shows the colormaps within the gamut corresponding to different L values in the CIELAB color space, the results can be found in [CIELAB_gamut](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/CIELAB_gamut); you can also find the colormaps without gamut-mapping in [CIELAB](https://github.com/justaneater/Color-Image-Enhancement/tree/main/model_analysis/CIELAB)
