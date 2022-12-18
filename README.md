@@ -22,7 +22,9 @@ Step 2.1 - Normalize the `S`(Saturation) channel and apply gamma correction with
 
 Step 2.2 - Set the threshold of `S/V`, and restore the S value to the value before normalization if the color block is below the threshold
 
-![CIELab](https://user-images.githubusercontent.com/96414401/208231458-b51f6be6-3b1a-4c7b-92c1-5bb6e83bbb58.png) ![untitled](https://user-images.githubusercontent.com/96414401/208231462-623df974-56be-4c7e-ab51-2b3fdd8b1da1.png)
+![CIELab](https://user-images.githubusercontent.com/96414401/208271342-7568b5f5-4a2f-460c-a0aa-50b8d6cf86f6.png)
+![untitled](https://user-images.githubusercontent.com/96414401/208271343-3c267a6b-d1e8-43e5-8172-2d23df3e8ba2.png)
+
 
 Step 3 - Divide the `H`(Hue) Channel into 12 pieces, and apply linear normalization to each pieces
 
