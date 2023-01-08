@@ -1,7 +1,7 @@
 # Color-Image-Enhancement
 * Set your github to dark theme before reading
 
-## [Foreword - Low Light Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/Low_light_enhancement.m)
+## [Foreward - Low Light Enhancement](https://github.com/justaneater/Color-Image-Enhancement/blob/main/Low_light_enhancement.m)
 The full code can be found in [MATLAB Documentation](https://www.mathworks.com/help/images/low-light-image-enhancement.html?s_tid=srchtitle_low%20light_1). The code used in this project are divided into three steps.
 
 Step 1 - Invert the low-light image using the `Imcomplement()` function
